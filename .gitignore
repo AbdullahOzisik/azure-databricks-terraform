@@ -1,0 +1,30 @@
+# Terraform local state
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+**/.terraform.lock.hcl
+
+# Terraform variables (kan secrets bevatten)
+*.tfvars
+*.tfvars.json
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Azure CLI
+.azure/
+
+# Sensitive environment files
+.env
