@@ -18,3 +18,8 @@ provider "azurerm" {
 provider "databricks" {
   host = azurerm_databricks_workspace.dbw.workspace_url
 }
+
+provider "databricks" {
+  host  = databricks_workspace.this.workspace_url
+  token = var.databricks_token
+}
