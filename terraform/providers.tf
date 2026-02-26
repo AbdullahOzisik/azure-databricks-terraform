@@ -14,12 +14,7 @@ terraform {
 provider "azurerm" {
   features {}
 }
-
 provider "databricks" {
-  host = azurerm_databricks_workspace.dbw.workspace_url
-}
-
-provider "databricks" {
-  host  = databricks_workspace.this.workspace_url
+  host  = "https://adb-7405619278066024.4.azuredatabricks.net"
   token = var.databricks_token
 }

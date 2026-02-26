@@ -4,7 +4,10 @@ resource "databricks_cluster" "dev_cluster" {
   node_type_id            = data.databricks_node_type.smallest.id
   autotermination_minutes = 15
 
-  num_workers             = 0
+  autoscale {
+  min_workers = 1
+  max_workers = 3
+}
 
   # Required when NO_ISOLATION isn't allowed in the workspace
   data_security_mode = "SINGLE_USER"
