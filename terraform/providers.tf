@@ -16,5 +16,4 @@ provider "azurerm" {
 }
 provider "databricks" {
   host  = "https://adb-7405619278066024.4.azuredatabricks.net"
-  token = var.databricks_token
 }
